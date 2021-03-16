@@ -1,0 +1,20 @@
+.sidebar {
+	flex: 0.33;
+	background-color:  #f1f2f5;
+}
+
+/*
+	flex: 0.15;
+	background-color:  #F5F5F5;
+	position : sticky;
+	top: 0;
+	//*/
+
+.sidebar > hr {
+	height: 1px;
+	border: 0;
+	background-color: #f1f2f5;
+	margin-top:  10px;
+	margin-bottom: 10px;
+}
+
