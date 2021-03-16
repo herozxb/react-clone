@@ -11,7 +11,7 @@ function Feed() {
     	<MessageSender className="feed__messageSender"/>
     	<Post 
     		profilePic="https://avatars2.githubusercontent.com/u/22930837"
-    		message="Hello This World!"
+    		message="Hello This World! Nov 15, 2018 — npm run build does nothing unless you specify what  does in your package.json file. It lets you perform any necessary building/prep tasks ..."
     		timestamp="2021.02.28"
     		username="xibo"
     		image="https://code.org/shared/images/social-media/codeorg2019_social.png"
