@@ -1,0 +1,52 @@
+.VideoRow{
+	display: flex;
+	margin-bottom: 30px;
+	max-width: 700px;
+}
+
+.VideoRow > img {
+	object-fit : contain;
+	width: 246px;
+	height: 138px;
+
+}
+
+
+
+.VideoRow__text{
+	margin-left: 14px;
+}
+
+.VideoRow__descriptiont{
+	margin-top: 20px;
+	font-size: 12px;
+	color: #606060;
+}
+
+
+.VideoRow__subs{
+	background-color: lightgrey;
+	padding: 2px;
+}
+
+.VideoRow__subsNumber{
+	font-weight: bolder;
+	color: rgb(84,157,211);
+}
+
+.VideoRow__headline{
+	font-size: 12px;
+	color: #606060;
+}
+
+
+.VideoRow__text > p { 
+	color: #606060;
+	font-size: small !important;
+}
+
+.VideoRowtext > h4 {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
