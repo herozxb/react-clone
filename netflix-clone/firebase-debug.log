@@ -1,0 +1,332 @@
+[debug] [2021-03-17T03:41:22.602Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:41:22.604Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --reauth
+[debug] [2021-03-17T03:41:22.604Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:41:22.604Z] Platform:      darwin
+[debug] [2021-03-17T03:41:22.604Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:41:22.605Z] Time:          Wed Mar 17 2021 11:41:22 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:41:22.605Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:41:22.605Z] 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=111608315&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:41:30.387Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:41:30.389Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --reauth --debug
+[debug] [2021-03-17T03:41:30.389Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:41:30.389Z] Platform:      darwin
+[debug] [2021-03-17T03:41:30.389Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:41:30.390Z] Time:          Wed Mar 17 2021 11:41:30 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:41:30.390Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:41:30.390Z] 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=1447872&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:41:39.788Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g4wanUssI1ghLXSwTu-jqyACJg_AlebNDpIKv0mvY1c58Jbuv6kNodUnvKGIaRa-A","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T03:41:39.795Z] Token Fetch Error: FirebaseError: Server Error. tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:1087
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at ClientRequest.onError (/usr/local/lib/node_modules/firebase-tools/node_modules/tunnel-agent/index.js:179:21)
+    at Object.onceWrapper (node:events:483:26)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at Socket.socketErrorListener (node:_http_client:474:9)
+    at Socket.emit (node:events:376:20)
+    at Socket.EventEmitter.emit (node:domain:470:12)
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[debug] [2021-03-17T03:43:30.719Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:43:30.721Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --reauth --debug
+[debug] [2021-03-17T03:43:30.722Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:43:30.722Z] Platform:      darwin
+[debug] [2021-03-17T03:43:30.722Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:43:30.722Z] Time:          Wed Mar 17 2021 11:43:30 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:43:30.722Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:43:30.723Z] 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=261196771&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:43:36.534Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g44Hl_EOZyGpfmThtjk2-cVacwtigQWbkJ6zMVIblhndS_iwofqNgdT3xfZk6T_qg","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T03:44:51.728Z] Token Fetch Error: FirebaseError: Server Error. connect ETIMEDOUT 172.217.31.237:443
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at TLSSocket.socketErrorListener (node:_http_client:474:9)
+    at TLSSocket.emit (node:events:376:20)
+    at TLSSocket.EventEmitter.emit (node:domain:470:12)
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+    at processTicksAndRejections (node:internal/process/task_queues:80:21)
+[debug] [2021-03-17T03:46:00.269Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:46:00.271Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --debug
+[debug] [2021-03-17T03:46:00.271Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:46:00.271Z] Platform:      darwin
+[debug] [2021-03-17T03:46:00.271Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:46:00.272Z] Time:          Wed Mar 17 2021 11:46:00 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:46:00.272Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:46:00.272Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=913182912&redirect_uri=http%3A%2F%2Flocalhost%3A9006
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:46:06.205Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g6SM19WFzyo5XJWLyz8qhnc6n36lIIGn6QC_hNedxa58fnfgJDSZtX0_O3qQKoqMA","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9006","grant_type":"authorization_code"}
+[debug] [2021-03-17T03:46:06.210Z] Token Fetch Error: FirebaseError: Server Error. tunneling socket could not be established, cause=Parse Error: Expected HTTP/
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at ClientRequest.onError (/usr/local/lib/node_modules/firebase-tools/node_modules/tunnel-agent/index.js:179:21)
+    at Object.onceWrapper (node:events:483:26)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at Socket.socketOnData (node:_http_client:521:9)
+    at Socket.emit (node:events:376:20)
+    at Socket.EventEmitter.emit (node:domain:470:12)
+    at addChunk (node:internal/streams/readable:311:12)
+    at readableAddChunk (node:internal/streams/readable:286:9)
+[debug] [2021-03-17T03:47:39.640Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:47:39.642Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --debug
+[debug] [2021-03-17T03:47:39.642Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:47:39.642Z] Platform:      darwin
+[debug] [2021-03-17T03:47:39.642Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:47:39.643Z] Time:          Wed Mar 17 2021 11:47:39 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:47:39.643Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:47:39.643Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=216180809&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:47:50.895Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g4eu4jMkjSFss9GvXuBedZ4AAZG37ENfiylYL9cQnovCbJxt6PFjW6zv2ha9-TFzQ","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T03:47:50.900Z] Token Fetch Error: FirebaseError: Server Error. tunneling socket could not be established, cause=Parse Error: Expected HTTP/
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at ClientRequest.onError (/usr/local/lib/node_modules/firebase-tools/node_modules/tunnel-agent/index.js:179:21)
+    at Object.onceWrapper (node:events:483:26)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at Socket.socketOnData (node:_http_client:521:9)
+    at Socket.emit (node:events:376:20)
+    at Socket.EventEmitter.emit (node:domain:470:12)
+    at addChunk (node:internal/streams/readable:311:12)
+    at readableAddChunk (node:internal/streams/readable:286:9)
+[debug] [2021-03-17T03:48:28.810Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:48:28.811Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --debug
+[debug] [2021-03-17T03:48:28.812Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:48:28.812Z] Platform:      darwin
+[debug] [2021-03-17T03:48:28.812Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:48:28.813Z] Time:          Wed Mar 17 2021 11:48:28 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:48:28.813Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:48:28.813Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=732425550&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:48:34.775Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g7vfHTqrxOsYMFIHIut5FmEHBoNJj99gt9Of4oLOquVrxdSulehFl7njlCx7XreGQ","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T03:49:50.004Z] Token Fetch Error: FirebaseError: Server Error. connect ETIMEDOUT 172.217.31.237:443
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at TLSSocket.socketErrorListener (node:_http_client:474:9)
+    at TLSSocket.emit (node:events:376:20)
+    at TLSSocket.EventEmitter.emit (node:domain:470:12)
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+    at processTicksAndRejections (node:internal/process/task_queues:80:21)
+[debug] [2021-03-17T03:51:25.784Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:51:25.786Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --debug
+[debug] [2021-03-17T03:51:25.786Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:51:25.786Z] Platform:      darwin
+[debug] [2021-03-17T03:51:25.786Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:51:25.787Z] Time:          Wed Mar 17 2021 11:51:25 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:51:25.787Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:51:25.787Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=96661692&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:51:31.795Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g4g6MNq9hmhY3q1NdFovzjXMsdysoTzw4Mx2txiog0Ilfh2YIX4NAoc32ZGifC_2A","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T03:52:46.942Z] Token Fetch Error: FirebaseError: Server Error. connect ETIMEDOUT 172.217.31.237:443
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at TLSSocket.socketErrorListener (node:_http_client:474:9)
+    at TLSSocket.emit (node:events:376:20)
+    at TLSSocket.EventEmitter.emit (node:domain:470:12)
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+    at processTicksAndRejections (node:internal/process/task_queues:80:21)
+[debug] [2021-03-17T03:54:29.630Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:54:29.632Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --debug
+[debug] [2021-03-17T03:54:29.632Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:54:29.632Z] Platform:      darwin
+[debug] [2021-03-17T03:54:29.632Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:54:29.633Z] Time:          Wed Mar 17 2021 11:54:29 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:54:29.633Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:54:29.633Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=323360636&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:54:35.834Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g5g5CQ8drwiGVGA2fnhnvSxBYKLfJ6y19_H_GD4eGpMM9OV2foDSoW-t56GS81iCg","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T03:54:35.839Z] Token Fetch Error: FirebaseError: Server Error. tunneling socket could not be established, cause=connect ECONNREFUSED 127.0.0.1:1087
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at ClientRequest.onError (/usr/local/lib/node_modules/firebase-tools/node_modules/tunnel-agent/index.js:179:21)
+    at Object.onceWrapper (node:events:483:26)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at TLSSocket.socketErrorListener (node:_http_client:474:9)
+    at TLSSocket.emit (node:events:376:20)
+    at TLSSocket.EventEmitter.emit (node:domain:470:12)
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[debug] [2021-03-17T03:58:41.694Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:58:41.696Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --debug
+[debug] [2021-03-17T03:58:41.696Z] CLI Version:   8.15.0
+[debug] [2021-03-17T03:58:41.696Z] Platform:      darwin
+[debug] [2021-03-17T03:58:41.696Z] Node Version:  v15.5.1
+[debug] [2021-03-17T03:58:41.697Z] Time:          Wed Mar 17 2021 11:58:41 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T03:58:41.697Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T03:58:41.697Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=944221367&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T03:58:50.035Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g4Pu4VZ8G3tF8HPssR92a4bh0_J3nipFjtH9-x76rxFyFgbMsYnKN2e_pHNwYn4yg","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T04:00:05.542Z] Token Fetch Error: FirebaseError: Server Error. connect ETIMEDOUT 172.217.24.77:443
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at TLSSocket.socketErrorListener (node:_http_client:474:9)
+    at TLSSocket.emit (node:events:376:20)
+    at TLSSocket.EventEmitter.emit (node:domain:470:12)
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+    at processTicksAndRejections (node:internal/process/task_queues:80:21)
+[debug] [2021-03-17T04:04:43.589Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T04:04:43.591Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --debug
+[debug] [2021-03-17T04:04:43.591Z] CLI Version:   8.15.0
+[debug] [2021-03-17T04:04:43.591Z] Platform:      darwin
+[debug] [2021-03-17T04:04:43.591Z] Node Version:  v15.5.1
+[debug] [2021-03-17T04:04:43.592Z] Time:          Wed Mar 17 2021 12:04:43 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T04:04:43.592Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T04:04:43.592Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=453274504&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T04:04:53.744Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g4OMk61LJ3Vf86aFAQCjuA49JhhS0AT3URHbgM_APR66_DU807WqxBKQRmmqa7-Mw","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T04:04:53.751Z] Token Fetch Error: FirebaseError: Server Error. tunneling socket could not be established, cause=write EPROTO 4492674496:error:1408F10B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:332:
+
+    at Request._callback (/usr/local/lib/node_modules/firebase-tools/lib/api.js:32:31)
+    at self.callback (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:185:22)
+    at Request.emit (node:events:376:20)
+    at Request.EventEmitter.emit (node:domain:470:12)
+    at Request.onRequestError (/usr/local/lib/node_modules/firebase-tools/node_modules/request/request.js:877:8)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at ClientRequest.onError (/usr/local/lib/node_modules/firebase-tools/node_modules/tunnel-agent/index.js:179:21)
+    at Object.onceWrapper (node:events:483:26)
+    at ClientRequest.emit (node:events:376:20)
+    at ClientRequest.EventEmitter.emit (node:domain:470:12)
+    at TLSSocket.socketErrorListener (node:_http_client:474:9)
+    at TLSSocket.emit (node:events:376:20)
+    at TLSSocket.EventEmitter.emit (node:domain:470:12)
+    at emitErrorNT (node:internal/streams/destroy:188:8)
+    at emitErrorCloseNT (node:internal/streams/destroy:153:3)
+[debug] [2021-03-17T04:06:59.484Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T04:06:59.485Z] Command:       /usr/local/bin/node /usr/local/bin/firebase login --debug
+[debug] [2021-03-17T04:06:59.486Z] CLI Version:   8.15.0
+[debug] [2021-03-17T04:06:59.486Z] Platform:      darwin
+[debug] [2021-03-17T04:06:59.486Z] Node Version:  v15.5.1
+[debug] [2021-03-17T04:06:59.486Z] Time:          Wed Mar 17 2021 12:06:59 GMT+0800 (中国标准时间)
+[debug] [2021-03-17T04:06:59.487Z] ----------------------------------------------------------------------
+[debug] [2021-03-17T04:06:59.487Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=700641196&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-17T04:07:09.444Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g58xWRR4b3oGHiQ40Q5ybC6g2QUILkBjA4BkzkaqUuWz4CFmmYOsq7ffjFHSY_TJw","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-17T04:07:10.256Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Wed, 17 Mar 2021 04:07:10 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] ✔  Success! Logged in as herozxb@gmail.com 
