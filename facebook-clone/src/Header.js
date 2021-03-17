@@ -16,9 +16,11 @@ import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive"
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import { Avatar, IconButton } from "@material-ui/core"
 import { Link } from "react-router-dom"
+import {useStateValue} from "./StateProvider"
 
 function Header() {
 
+	const [ { user }, dispatch ] = useStateValue();
 	const [inputSearch, setInputSearch] = useState("");
 
 	return (
@@ -54,9 +56,9 @@ function Header() {
 			<div className="header__info">
 				<Avatar
 	      			alt="xibo"
-	      			src="https://avatars2.githubusercontent.com/u/22930837" 
+	      			src={user.photoURL} 
 	      		/>
-	      		<h4>Xibo</h4>
+	      		<h4>{user.displayName}</h4>
       		</div>
       		<div className="header__iconbutton">
 	      		<IconButton>

@@ -16,13 +16,15 @@ import ChatIcon from "@material-ui/icons/Chat"
 import StorefrontIcon from "@material-ui/icons/Storefront"
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary"
 
+import { useStateValue } from './StateProvider';
 import SidebarRow from "./SidebarRow";
 
 function Sidebar() {
+    const [{user},dispatch] = useStateValue();
   return (
     <div className="sidebar">
 
-        <SidebarRow selected src="https://avatars2.githubusercontent.com/u/22930837" title="Xibo" />
+        <SidebarRow selected src={ user.photoURL } title={ user.displayName }/>
     	<SidebarRow Icon={LocalHospitalIcon} title="Covid-19" />
     	<SidebarRow Icon={EmojiFlagsIcon} title="Pages" />
         <SidebarRow Icon={PeopleIcon} title="Friends" />

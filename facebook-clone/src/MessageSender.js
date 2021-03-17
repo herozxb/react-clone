@@ -1,16 +1,30 @@
 import React, { useState } from 'react';
 import './MessageSender.css';
-import { Avatar } from "@material-ui/core"
-import VideocamIcon from "@material-ui/icons/Videocam"
-import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary"
-import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon"
+import { Avatar } from "@material-ui/core";
+import VideocamIcon from "@material-ui/icons/Videocam";
+import PhotoLibraryIcon from "@material-ui/icons/PhotoLibrary";
+import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
+import { useStateValue } from './StateProvider';
+import db from "./Firebase";
+import firebase from "firebase";
 
 function MessageSender({ image, profileSrc, title }) {
 
+	const [{user},dispatch] = useStateValue();
 	const [ input, setInput ] = useState('');
 	const [ inputURL, setInputURL ] = useState('');
 	const handleSubmit = e => {
 		e.preventDefault();
+
+
+		db.collection('posts').add({
+			message:input,
+			timestamp:firebase.firestore.FieldValue.serverTimestamp(),
+			profilePic: user.photoURL,
+			username:user.displayName,
+			image:inputURL,
+
+		})
 
 		setInput("");
 		setInputURL("");
@@ -19,13 +33,13 @@ function MessageSender({ image, profileSrc, title }) {
 	return (
 		<div className='messageSender'>
 		    <div className='messagesender_top'>
-		        <Avatar className='messagesender__avatar' src={profileSrc} />
+		        <Avatar className='messagesender__avatar' src={user.photoURL} />
 		        <form>
 		        	<input
 		        		value={input}
 		        		onChange={(e) => {setInput(e.target.value)}}
 		        		className='messagesender__input'
-		        		placeholder={"What's on your mind"}
+		        		placeholder={`What's on your mind, ${user.displayName}`}
 		        		type="text"
 		        	/>
 		        	<input

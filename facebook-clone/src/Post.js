@@ -4,6 +4,7 @@ import { Avatar } from "@material-ui/core"
 import ThumbUpIcon from "@material-ui/icons/ThumbUp"
 import ChatBubbleOutlineIcon from "@material-ui/icons/ChatBubbleOutline"
 import NearMeIcon from "@material-ui/icons/NearMe"
+import moment from 'moment'
 
 
 function Post({ profilePic, image, username, timestamp, message }) {
@@ -13,7 +14,7 @@ function Post({ profilePic, image, username, timestamp, message }) {
     		<Avatar className='post__avatar' src={profilePic} />
     		<div className='post__topInfo'>
 	    		<h2>{username}</h2>
-				<p>Timestamp</p>
+				<p>{timestamp? moment(timestamp.toDate()).fromNow() : "none"}</p>
     		</div>
     	</div>
     	<div className='post__message'>

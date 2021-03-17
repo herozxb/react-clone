@@ -1,35 +1,40 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Feed.css';
 import StoryReel from "./StoryReel"
 import MessageSender from "./MessageSender"
 import Post from "./Post"
+import db from "./Firebase"
 
 function Feed() {
+
+    const [posts,setPosts] = useState([]);
+
+    useEffect(()=>{
+        db.collection('posts')
+        .orderBy('timestamp','desc')
+        .onSnapshot( snapshot => (
+            setPosts(snapshot.docs.map(doc=>(
+                 {id:doc.id, data: doc.data()} )))
+            ));
+
+    },[]);
+
   return (
     <div className="feed">
     	<StoryReel/>
     	<MessageSender className="feed__messageSender"/>
-    	<Post 
-    		profilePic="https://avatars2.githubusercontent.com/u/22930837"
-    		message="Hello This World! Nov 15, 2018 — npm run build does nothing unless you specify what  does in your package.json file. It lets you perform any necessary building/prep tasks ..."
-    		timestamp="2021.02.28"
-    		username="xibo"
-    		image="https://code.org/shared/images/social-media/codeorg2019_social.png"
-    	/>	
-    	<Post 
-    		profilePic="https://avatars2.githubusercontent.com/u/22930837"
-    		message="Hello This World!"
-    		timestamp="2021.02.28"
-    		username="xibo"
-    		image="https://code.org/shared/images/social-media/codeorg2019_social.png"
-    	/>	
-    	<Post 
-    		profilePic="https://avatars2.githubusercontent.com/u/22930837"
-    		message="Hello This World!"
-    		timestamp="2021.02.28"
-    		username="xibo"
-    		image="https://code.org/shared/images/social-media/codeorg2019_social.png"
-    	/>	
+        {posts.map(
+            post => (
+                <Post
+                    key={post.id}
+                    profilePic={post.data.profilePic}
+                    message={post.data.message}
+                    timestamp={post.data.timestamp}
+                    username={post.data.username}
+                    image={post.data.image}
+                />
+            ) 
+        )}
     	<div className="feed__videos">
     	</div>
     </div>
