@@ -8,6 +8,7 @@ const peerServer = ExpressPeerServer(server, {
 	debug: true
 });
 
+
 //setup
 app.set('view engine','ejs');
 app.use(express.static('public'));
