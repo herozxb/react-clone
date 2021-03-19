@@ -1,13 +1,26 @@
 const express = require('express')
 const app = express()
-const server = require('http').Server(app)
+
+
+const https = require('https')
+const fs = require('fs');
+var key = fs.readFileSync('./selfsigned.key');
+var cert = fs.readFileSync('./selfsigned.crt');
+var options = {
+  key: key,
+  cert: cert
+};
+
+//const server = require('https').Server(app)
+const server = https.createServer(options, app);
+
+
 const io = require('socket.io')(server);
 const { v4: uuidv4 } = require('uuid');
 const { ExpressPeerServer } = require('peer');
 const peerServer = ExpressPeerServer(server, {
 	debug: true
 });
-
 
 //setup
 app.set('view engine','ejs');
