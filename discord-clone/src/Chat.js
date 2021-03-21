@@ -62,7 +62,7 @@ function Chat(){
 					))}
 			</div>
 			<div className="chat__input">
-				<AddCircleIcon fontSize="large"/>
+				<AddCircleIcon onClick={sendMessage} fontSize="large"/>
 				<form>
 					<input 
 						value={input} 
