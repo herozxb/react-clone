@@ -12,8 +12,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-df = pd.read_csv('quotes_dataset_title.csv')
-#df = pd.read_csv('motivational_quotes_database.csv')
+#df = pd.read_csv('quotes_dataset_title.csv')
+df = pd.read_csv('motivational_quotes_database.csv')
 #print("==========1==========")
 #print(df.head())
 # Get tf-idf matrix using fit_transform function
