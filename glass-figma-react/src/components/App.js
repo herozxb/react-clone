@@ -119,6 +119,12 @@ const Channel = styled.p`
   width:50px;
   height:50px;
 
+  cursor:pointer;
+  transition: all 0.2s ease-in;
+  &:hover {
+    transform: translateX(-10px);
+  }
+
 
 
   h3 {

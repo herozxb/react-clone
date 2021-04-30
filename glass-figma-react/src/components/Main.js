@@ -107,6 +107,12 @@ const WrapperCard = styled.div`
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 
+    cursor:pointer;
+    transition: all 0.2s ease-in;
+    &:hover {
+        transform: translateY(-5px);
+    }
+
     img {
       margin-top:12px;
       margin-left:12px;
