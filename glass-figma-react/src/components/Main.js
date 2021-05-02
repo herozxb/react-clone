@@ -62,14 +62,14 @@ const Container = styled.div`
 
     color: rgba(5, 3, 74, 0.6);
 
-	@media (max-width: 900px) {
+	@media (max-width: 600px) {
       display: none;
     }
   }
 
 `;
 
-const SearchBar = styled.div`
+const SearchBar = styled.input`
     position: relative;
     width: 38%;
     height: 38px;
@@ -81,6 +81,8 @@ const SearchBar = styled.div`
     /* Note: backdrop-filter has minimal browser support */
 
     border-radius: 30px;
+    outline: none;
+    padding-left: 20px;
 
     border: solid;
     border: 0.2rem solid white;
@@ -91,6 +93,8 @@ const WrapperSearch = styled.div`
   img {
     height:38px;
     margin-left:20px;
+    transform: translateX(-10px);
+    cursor:pointer;
   }
 `;
 
