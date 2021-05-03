@@ -7,50 +7,54 @@ import Transformer from "../assets/Transformer.png";
 
 const Main = () => {
   return (
-    <Container>
+    <MainContainer>
       <h1>
         Active Games
       </h1>
-      <WrapperSearch>
+      <SearchWrapper>
         <SearchBar/>
         <img src={search} alt="" />
-      </WrapperSearch>
-      <WrapperCard>
+      </SearchWrapper>
+
+      <CardWrapper>
         <img src={Transformer} alt="" />
-        <WrapperText>
+        <TextWrapper>
             <h2>Transformer - Age of Extinction</h2>
             <h3>PS5 Station</h3>
-        </WrapperText>
-      </WrapperCard>
-      <WrapperCard>
+        </TextWrapper>
+      </CardWrapper>
+
+      <CardWrapper>
         <img src={Spiderman} alt="" />
-        <WrapperText>
+        <TextWrapper>
             <h2>Spider Man - Miles Morales</h2>
             <h3>PS5 Station</h3>
-        </WrapperText>
-      </WrapperCard>
-      <WrapperCard>
+        </TextWrapper>
+      </CardWrapper>
+
+      <CardWrapper>
         <img src={Ironman} alt="" />
-        <WrapperText>
+        <TextWrapper>
             <h2>Iron Man - Armor War I</h2>
             <h3>PS5 Station</h3>
-        </WrapperText>
-      </WrapperCard>
-    </Container>
+        </TextWrapper>
+      </CardWrapper>
+      
+    </MainContainer>
   );
 };
 
-const Container = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+const MainContainer = styled.div`
+
+  flex:2;
 
 
-  margin-left:620px;
-  margin-top:20px;
-  position: absolute;
-  z-index: 100;
+  margin-left:50px;
+  margin-right:50px;
+
+  @media (max-width: 1000px) {
+      display: none;
+    }
 
 
   h1 {
@@ -62,18 +66,25 @@ const Container = styled.div`
 
     color: rgba(5, 3, 74, 0.6);
 
-	@media (max-width: 600px) {
-      display: none;
-    }
   }
 
 `;
 
-const SearchBar = styled.input`
-    position: relative;
-    width: 38%;
-    height: 38px;
+const SearchWrapper = styled.div`
+  display:flex;
+  align-items:center;
+  margin-bottom:20px;
 
+  img  {
+    margin-left: 20px;
+    cursor:pointer;
+  }
+`;
+
+const SearchBar = styled.input`
+
+    width:42vw;
+    height:50px;
 
     background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 100%);
     opacity: 1;
@@ -88,24 +99,15 @@ const SearchBar = styled.input`
     border: 0.2rem solid white;
 `;
 
-const WrapperSearch = styled.div`
-  display:flex;
-  img {
-    height:38px;
-    margin-left:20px;
-    transform: translateX(-10px);
-    cursor:pointer;
-  }
-`;
 
-const WrapperCard = styled.div`
+
+const CardWrapper = styled.div`
+
+    width:50vw;
+    height:110px;
+    margin-bottom:30px;
 
     display:flex;
-    position: relative;
-    width: 40%;
-    height: 120px;
-
-    margin-top:20px;
 
     background: linear-gradient(91.03deg, rgba(255, 255, 255, 1) 0%, rgba(190, 232, 255, 1) 48.44%, rgba(255, 255, 255, 1) 100%);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
@@ -118,14 +120,18 @@ const WrapperCard = styled.div`
     }
 
     img {
-      margin-top:12px;
-      margin-left:12px;
-      height: 80%;
+
+      margin : 8px;
+
 
     }
 
     h2 {
-        margin-left:30px;
+      margin-top : 15px;
+      margin-left : 10px;
+
+
+
 
         font-family: Roboto;
         font-style: normal;
@@ -137,8 +143,8 @@ const WrapperCard = styled.div`
     }
 
     h3 {
+        margin-left : 10px;
 
-        margin-left:30px;
 
         font-family: Roboto;
         font-style: normal;
@@ -153,9 +159,8 @@ const WrapperCard = styled.div`
 `;
 
 
-const WrapperText = styled.div`
-  display:flex;
-  flex-direction:column
+const TextWrapper = styled.div`
+
 
 `;
 

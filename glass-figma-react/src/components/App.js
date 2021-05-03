@@ -13,65 +13,31 @@ import twitch from "../assets/twitch.png";
 
 const App = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Card>
+    <AppContainer>
+      <AppWrapper>
+        <Glass>
           <Sidebar />
-        </Card>
-        <Main />
-      <LogoWrapper>
-        <img src={avatar} alt="" />
-        <h3>
-          Xibo Zhang
-        </h3>
-        <channelWrapper>
-          <Channel>
-            <img src={twitch} alt="" />
-            <h3>
-              Twitch
-            </h3>
-          </Channel>
-          <Channel>
-            <img src={steam} alt="" />
-            <h3>
-              Steam
-            </h3>
-          </Channel>
-          <Channel>
-            <img src={football} alt="" />
-            <h3>
-              Football
-            </h3>
-          </Channel>
-          <Channel>
-            <img src={gamepad} alt="" />
-            <h3>
-              Gamepad
-            </h3>
-          </Channel>
-          <Channel>
-            <img src={book} alt="" />
-            <h3>
-              Library
-            </h3>  
-          </Channel>
-        </channelWrapper>
-      </LogoWrapper>
-      </Wrapper>
-    </Container>
+          <Main />
+        </Glass>
+      </AppWrapper>
+    </AppContainer>
   );
 };
 
-const Container = styled.div`
+const AppContainer = styled.div`
   background: #eefcff;
-    position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
 
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+
 `;
-const Wrapper = styled.div`
+const AppWrapper = styled.div`
 
   	background-image: url(${bgImg});
     background-position: center;
@@ -79,22 +45,23 @@ const Wrapper = styled.div`
     background-repeat: no-repeat;
 	width: 100%;
 	height: 100%;
+  min-height: 100vh;
 	display: flex;
+  align-items: center;
+  justify-content: center;
 
 
 `;
 
-const Card = styled.div`
+const Glass = styled.div`
 
-  margin-left:150px;
-  margin-top:25px;
-  width: 80%;
-  height: 90%;
   display: flex;
+  height: 90vh;
+  width: 90vw;
 
 
   background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%);
-  opacity: 0.6;
+  opacity: 0.9;
   backdrop-filter: blur(100px);
   /* Note: backdrop-filter has minimal browser support */
 
@@ -106,66 +73,6 @@ const Card = styled.div`
 
 `;
 
-const channelWrapper = styled.div`
-
-
-`;
-
-
-const Channel = styled.p`
-  display: flex;
-  margin-left: -50px;
-  margin-top:0px;
-  width:50px;
-  height:50px;
-
-  cursor:pointer;
-  transition: all 0.2s ease-in;
-  &:hover {
-    transform: translateX(-10px);
-  }
-
-
-
-  h3 {
-      margin-left: 50px;
-      margin-top: 10px;
-      font-family: Roboto;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 30px;
-      line-height: 30px;
-
-      color: rgba(5, 3, 74, 0.8);
-
-  }
-`;
-
-
-
-
-const LogoWrapper = styled.div`
-
-    margin-left:280px;
-    position: absolute;
-    z-index: 100;
-
-    img {
-
-    }
-
-    margin-top:70px;
-    text-align: center;
-
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 10px;
-
-    color: rgba(5, 3, 74, 1); 
-
-`;
 
 
 
