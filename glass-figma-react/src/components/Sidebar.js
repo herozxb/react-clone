@@ -59,9 +59,9 @@ const SidebarContainer = styled.div`
 /* Positions */
   flex:1;
   display: flex;
-  height: 90vh;
-  width: 90vw;
 
+  width: 90vw;
+  height: 100%;
 
   flex-direction: column;
   align-items: center;
@@ -80,7 +80,7 @@ const SidebarContainer = styled.div`
 
   @media (max-width: 400px) {
     width: 90vw;
-    height: 90vh;
+    height: 100%;
     position: absolute;
     padding: 0;
   }

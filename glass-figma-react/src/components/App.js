@@ -33,7 +33,7 @@ const AppContainer = styled.div`
   right: 0;
 
   overflow-x: hidden;
-  overflow-y: hidden;
+
 
 
 `;
@@ -45,7 +45,7 @@ const AppWrapper = styled.div`
     background-repeat: no-repeat;
 	width: 100%;
 	height: 100%;
-  min-height: 100vh;
+  min-height: 100%;
 	display: flex;
   align-items: center;
   justify-content: center;
@@ -56,7 +56,7 @@ const AppWrapper = styled.div`
 const Glass = styled.div`
 
   display: flex;
-  height: 90vh;
+  height: 90%;
   width: 90vw;
 
 
