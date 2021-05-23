@@ -4,8 +4,11 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
+const socket = io('https://www.xhappysearch.com:5000');
 // const socket = io('http://localhost:5000');
-const socket = io('https://warm-wildwood-81069.herokuapp.com');
+// const socket = io('https://192.168.1.106:5000', { secure: true });
+// const socket = io('https://warm-wildwood-81069.herokuapp.com');
+// const socket = require('socket.io-client')('https://192.168.1.106:5000', { rejectUnauthorized: false });
 
 const ContextProvider = ({ children }) => {
   const [callAccepted, setCallAccepted] = useState(false);

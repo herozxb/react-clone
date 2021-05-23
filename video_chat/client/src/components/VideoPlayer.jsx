@@ -5,9 +5,10 @@ import { SocketContext } from '../Context';
 
 const useStyles = makeStyles((theme) => ({
   video: {
-    width: '550px',
+    width: '90vw',
+    maxWidth: '700px',
     [theme.breakpoints.down('xs')]: {
-      width: '300px',
+      width: '90vw',
     },
   },
   gridContainer: {

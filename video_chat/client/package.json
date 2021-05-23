@@ -2,7 +2,7 @@
 	"name": "client",
 	"version": "0.1.0",
 	"private": true,
-	"proxy": "https://warm-wildwood-81069.herokuapp.com",
+	"proxy": "https://www.xhappysearch.com:5000",
 	"dependencies": {
 		"@material-ui/core": "^4.11.3",
 		"@material-ui/icons": "^4.11.2",
@@ -10,10 +10,12 @@
 		"@testing-library/react": "^11.1.0",
 		"@testing-library/user-event": "^12.1.10",
 		"add": "^2.0.6",
+		"axios": "^0.21.1",
 		"peerjs": "^1.3.1",
 		"react": "^17.0.1",
 		"react-copy-to-clipboard": "^5.0.3",
 		"react-dom": "^17.0.1",
+		"react-qr-code": "^1.1.1",
 		"react-scripts": "4.0.3",
 		"simple-peer": "^9.10.0",
 		"socket.io-client": "^4.0.0",
@@ -21,7 +23,7 @@
 		"yarn": "^1.22.10"
 	},
 	"scripts": {
-		"start": "export HTTPS=true&&SSL_CRT_FILE=cert.pem&&SSL_KEY_FILE=key.pem react-scripts start",
+		"start": "export HTTPS=true&&PORT=3000 react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"

@@ -3,6 +3,8 @@ import { Button, TextField, Grid, Typography, Container, Paper } from '@material
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { Assignment, Phone, PhoneDisabled } from '@material-ui/icons';
 import { makeStyles } from '@material-ui/core/styles';
+import axios from 'axios';
+import QRCode from 'react-qr-code';
 
 import { SocketContext } from '../Context';
 
@@ -41,6 +43,24 @@ const Sidebar = ({ children }) => {
   const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
+  const [qrCode, setQrCode] = useState('null');
+
+  function getQrCode() {
+    // Make a request for a user with a given ID
+    console.log('====1===');
+    axios.get('https://www.xhappysearch.com:443/pay')
+      .then((response) => {
+        // handle success
+        console.log(setQrCode(response.data.output));
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error);
+      })
+      .then(() => {
+        // always executed
+      });
+  }
 
   return (
     <Container className={classes.container}>
@@ -52,7 +72,7 @@ const Sidebar = ({ children }) => {
               <TextField label="Name" value={name} onChange={(e) => setName(e.target.value)} fullWidth />
               <CopyToClipboard text={me} className={classes.margin}>
                 <Button variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
-                  Copy Your ID
+                  Copy Your ID {me}
                 </Button>
               </CopyToClipboard>
             </Grid>
@@ -70,6 +90,10 @@ const Sidebar = ({ children }) => {
               )}
             </Grid>
           </Grid>
+          <QRCode value={qrCode} />
+          <Button variant="contained" color="primary" onClick={getQrCode}>
+            Get QR for pay
+          </Button>
         </form>
         {children}
       </Paper>

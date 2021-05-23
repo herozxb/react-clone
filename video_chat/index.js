@@ -1,18 +1,22 @@
 const app = require("express")();
 const https = require('https')
 const fs = require('fs');
-var key = fs.readFileSync('./selfsigned.key');
-var cert = fs.readFileSync('./selfsigned.crt');
+//var key = fs.readFileSync('./localhost.key','utf8');
+//var cert = fs.readFileSync('./localhost.crt','utf8');
+
+var key = fs.readFileSync('./file.pem','utf8');
+var cert = fs.readFileSync('./file.crt','utf8');
+
 var options = {
   key: key,
   cert: cert
 };
 
 //const server = require('https').Server(app)
-const server = https.createServer(options, app);
+const https_server = https.createServer(options, app);
 const cors = require("cors");
 
-const io = require("socket.io")(server, {
+const io = require("socket.io")(https_server, {
 	cors: {
 		origin: "*",
 		methods: [ "GET", "POST" ]
@@ -43,4 +47,4 @@ io.on("connection", (socket) => {
 	});
 });
 
-server.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+https_server.listen(PORT, () => console.log(`https server is running on port ${PORT}`));
