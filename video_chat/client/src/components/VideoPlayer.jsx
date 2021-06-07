@@ -5,8 +5,8 @@ import { SocketContext } from '../Context';
 
 const useStyles = makeStyles((theme) => ({
   video: {
-    width: '90vw',
-    maxWidth: '700px',
+    width: '80vw',
+    maxWidth: '600px',
     [theme.breakpoints.down('xs')]: {
       width: '90vw',
     },
@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme) => ({
     padding: '10px',
     border: '2px solid black',
     margin: '10px',
+    background: 'linear-gradient(107.68deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%)',
   },
 }));
 

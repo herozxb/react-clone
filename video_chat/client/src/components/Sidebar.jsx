@@ -7,6 +7,8 @@ import axios from 'axios';
 import QRCode from 'react-qr-code';
 
 import { SocketContext } from '../Context';
+import useChat from './useChat';
+import './ChatRoom.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -36,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: '10px 20px',
     border: '2px solid black',
+    background: 'linear-gradient(107.68deg, rgba(255, 255, 255, 0.24) 0%, rgba(255, 255, 255, 0.06) 100%)',
+
   },
 }));
 
@@ -47,20 +51,25 @@ const Sidebar = ({ children }) => {
 
   function getQrCode() {
     // Make a request for a user with a given ID
-    console.log('====1===');
     axios.get('https://www.xhappysearch.com:443/pay')
       .then((response) => {
         // handle success
-        console.log(setQrCode(response.data.output));
-      })
-      .catch((error) => {
-        // handle error
-        console.log(error);
-      })
-      .then(() => {
-        // always executed
+        setQrCode(response.data.output);
       });
   }
+
+  const roomId = 7;
+  const { messages, sendMessage } = useChat(roomId); // Creates a websocket and manages messaging
+  const [newMessage, setNewMessage] = React.useState(''); // Message to be sent
+
+  const handleNewMessageChange = (event) => {
+    setNewMessage(event.target.value);
+  };
+
+  const handleSendMessage = () => {
+    sendMessage(newMessage);
+    setNewMessage('');
+  };
 
   return (
     <Container className={classes.container}>
@@ -94,6 +103,33 @@ const Sidebar = ({ children }) => {
           <Button variant="contained" color="primary" onClick={getQrCode}>
             Get QR for pay
           </Button>
+
+          <div className="chat-room-container">
+            <h1 className="room-name">Room: {roomId}</h1>
+            <div className="messages-container">
+              <ol className="messages-list">
+                {messages.map((message, i) => (
+                  <li
+                    key={i}
+                    className={`message-item ${
+                      message.ownedByCurrentUser ? 'my-message' : 'received-message'
+                    }`}
+                  >
+                    {message.body}
+                  </li>
+                ))}
+              </ol>
+            </div>
+            <textarea
+              value={newMessage}
+              onChange={handleNewMessageChange}
+              placeholder="Write message..."
+              className="new-message-input-field"
+            />
+            <button type="button" onClick={handleSendMessage} className="send-message-button">
+              Send
+            </button>
+          </div>
         </form>
         {children}
       </Paper>
